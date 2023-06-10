@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", default="your secret key")
 
-# SECRET_KEY = "django-insecure-6s-glf3mu(p)a7unbrp0&f1x-5@@k-va$b4)qy@d5(-#o0pjly"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "RENDER" not in os.environ
@@ -89,7 +89,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 DATABASES = {
     "default": dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default="postgres://testing_pdd6_user:jmthyhxMmnOEn0lB1p3LBXq8chDYmL6s@dpg-ci254v2k728i8tfn5930-a.oregon-postgres.render.com/testing_pdd6",
+        default="postgres://olakunle_user:zR5NbaJJYkNypdB9mrB0K2fL50MmrLvX@dpg-ci25ibbhp8u1a18o6nd0-a.oregon-postgres.render.com/olakunle",
         conn_max_age=600,
     )
 }
