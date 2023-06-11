@@ -7,8 +7,8 @@ readme = "README.md"
 packages = [{include = "django_api"}]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-Django = "^4.2.2"
+python = ">=3.7"
+Django = "^3.2.19"
 dj-database-url = "^2.0.0"
 psycopg2-binary = "^2.9.6"
 whitenoise = {extras = ["brotli"], version = "^6.4.0"}
