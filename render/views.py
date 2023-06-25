@@ -8,4 +8,4 @@ def index(request):
     obj.save()
     ans = Render.objects.all().values()
     print(request)
-    return render(request, "render/index.html", {"product": ans})
+    return render(request, "render/index.html", {"name": list(ans)})

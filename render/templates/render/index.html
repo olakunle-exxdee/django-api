@@ -25,6 +25,10 @@
       <div class="row text-center justify-content-center">
         <div class="col">
           <h1 class="display-4">Hello World!</h1>
+          {% for nam in name %}
+          <h1>{{nam.name}}</h1>
+          <p>{{nam.description}}</p>
+          {% endfor %}
         </div>
       </div>
     </main>
