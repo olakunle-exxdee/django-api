@@ -8,11 +8,5 @@ def index(request):
     obj.save()
     ans = Render.objects.all().values()
     print(request)
-<<<<<<< HEAD
+
     return render(request, "render/index.html", {"name": list(ans)})
-=======
-    return render(
-        request,
-        "render/index.html",
-    )
->>>>>>> parent of 118b6b8 (let goo)
