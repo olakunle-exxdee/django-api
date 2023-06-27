@@ -5,7 +5,7 @@ from .serializers import BlogSerializer
 
 
 # Create your views here.
-@api_view(["GET"])
+@api_view(["GET", "POST"])
 def index(request):
     if request.method == "GET":
         blogs = Blog.objects.all()
