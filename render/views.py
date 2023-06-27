@@ -1,12 +1,13 @@
-from django.shortcuts import render
-from .models import Render
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from .models import Blog
+from .serializers import BlogSerializer
 
 
 # Create your views here.
+@api_view(["GET"])
 def index(request):
-    obj = Render(name="olakune", description="ola")
-    obj.save()
-    ans = Render.objects.all().values()
-    print(request)
-
-    return render(request, "render/index.html", {"name": list(ans)})
+    if request.method == "GET":
+        blogs = Blog.objects.all()
+        serializer = BlogSerializer(blogs, many=True)
+        return Response({"blogs": serializer.data})
